@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "70112839465",
+    "project_id": "youbooks-app",
+    "storage_bucket": "youbooks-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70112839465:android:2ad0f5dc2a821d756ad938",
+        "android_client_info": {
+          "package_name": "com.youbooks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70112839465-7r29knd385un1hva2r0381137evl7ocp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMmqhh5c12IZowdSIuo9oK2nB-pTfcDZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70112839465-7r29knd385un1hva2r0381137evl7ocp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

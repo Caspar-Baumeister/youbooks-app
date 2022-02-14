@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:youbooks_app/provider/books_provider.dart';
 import 'package:youbooks_app/provider/youtuber_provider.dart';
-import 'package:youbooks_app/screens/home/home.dart';
+import 'package:youbooks_app/screens/data_loader.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,10 @@ class App extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => BooksProvider()),
         ChangeNotifierProvider(create: (_) => YoutuberProvider()),
       ],
-      child: const MaterialApp(home: Home()),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: DataLoader(),
+      ),
     );
   }
 }

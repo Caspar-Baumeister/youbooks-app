@@ -12,8 +12,6 @@ class Book {
   });
 
   factory Book.fromJson(dynamic json) {
-    print("inside book model");
-    print(json.toString());
     return Book(
       title: json['title'],
       author: json['author'],

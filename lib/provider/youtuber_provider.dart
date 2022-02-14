@@ -9,7 +9,7 @@ class YoutuberProvider extends ChangeNotifier {
 
   List<Youtuber> get youtuber => _youtuber;
 
-  youtuberProvider() {
+  YoutuberProvider() {
     loadData();
   }
 

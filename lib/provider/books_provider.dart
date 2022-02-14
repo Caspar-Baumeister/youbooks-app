@@ -9,7 +9,7 @@ class BooksProvider extends ChangeNotifier {
 
   List<Book> get books => _books;
 
-  booksProvider() {
+  BooksProvider() {
     loadData();
   }
 
@@ -21,9 +21,6 @@ class BooksProvider extends ChangeNotifier {
   Future<void> loadData() async {
     final List<Object?> rawBooks = await DataBaseService().getAllBook();
     books = List<Book>.from(rawBooks.map((e) => Book.fromJson(e)));
-    books.forEach((element) {
-      print(element.title);
-    });
     initialized = true;
     notifyListeners();
   }

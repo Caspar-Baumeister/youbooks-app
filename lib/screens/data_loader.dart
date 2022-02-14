@@ -9,8 +9,8 @@ class DataLoader extends StatelessWidget {
   const DataLoader({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
-    YoutuberProvider youtuberProvider = Provider.of<YoutuberProvider>(context);
     BooksProvider booksProvider = Provider.of<BooksProvider>(context);
+    YoutuberProvider youtuberProvider = Provider.of<YoutuberProvider>(context);
 
     return (youtuberProvider.initialized && booksProvider.initialized)
         ? const Home()

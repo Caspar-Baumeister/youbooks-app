@@ -15,7 +15,7 @@ class Youtuber {
 
   factory Youtuber.fromJson(dynamic json) {
     return Youtuber(
-      books: json['books'],
+      books: List<String>.from(json['books'].map((e) => e.toString())),
       name: json['name'],
       url: json['url'],
       imgSrc: json['imgSrc'],

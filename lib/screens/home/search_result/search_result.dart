@@ -12,14 +12,8 @@ class SearchResult extends StatelessWidget {
     // BooksProvider booksProvider = Provider.of<BooksProvider>(context);
     DataBaseService service = DataBaseService();
 
-    return Expanded(
-      child: Container(
-          color: Colors.blue, child: Center(child: Text("searchresult body"))
-          //  ListView(
-          //   shrinkWrap: true,
-          //   children: [...booksProvider.books.map((e) => Text(e.title))],
-          // ),
-          ),
+    return Container(
+      decoration: BoxDecoration(color: Colors.grey),
     );
   }
 }

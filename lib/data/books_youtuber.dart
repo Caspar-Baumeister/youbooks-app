@@ -202,7 +202,7 @@ const List books = [
     "amz": "https://amzn.to/2R8pYWU",
   },
   {
-    "id": "manssearchformeaning",
+    "id": "man'ssearchformeaning",
     "title": "Man's Search for Meaning",
     "imgSrc":
         "https://images-eu.ssl-images-amazon.com/images/I/41ZgK6u73qL._SY264_BO1,204,203,200_QL40_ML2_.jpg",
@@ -218,7 +218,7 @@ const List books = [
     "amz": "https://amzn.to/3vXPZqk",
   },
   {
-    "id": "psychocybernetics",
+    "id": "psycho-cybernetics",
     "title": "Psycho-Cybernetics",
     "imgSrc":
         "https://images-na.ssl-images-amazon.com/images/I/51EPMqvqURL._SX331_BO1,204,203,200_.jpg",
@@ -234,7 +234,7 @@ const List books = [
     "amz": "https://amzn.to/3od959q",
   },
   {
-    "id": "sogoodtheycantignoreyou",
+    "id": "sogoodtheycan'tignoreyou",
     "title": "So Good They Can't Ignore You",
     "imgSrc":
         "https://images-na.ssl-images-amazon.com/images/I/41sAVddTaAL._SX328_BO1,204,203,200_.jpg",
@@ -274,7 +274,7 @@ const List books = [
     "amz": "https://amzn.to/3huEFhL",
   },
   {
-    "id": "the4hourworkweek",
+    "id": "the4-hourworkweek",
     "title": "The 4-Hour Workweek",
     "imgSrc":
         "https://images-na.ssl-images-amazon.com/images/I/51I2EIRF44L._SX329_BO1,204,203,200_.jpg",
@@ -322,7 +322,7 @@ const List books = [
     "amz": "https://amzn.to/33IsBB6",
   },
   {
-    "id": "canthurtme",
+    "id": "can'thurtme",
     "title": "Can't Hurt Me",
     "imgSrc":
         "https://images-na.ssl-images-amazon.com/images/I/41hN6mCSqGL._SX331_BO1,204,203,200_.jpg",
@@ -353,7 +353,7 @@ const List books = [
     "amz": "https://amzn.to/3bp3uHL",
   },
   {
-    "id": "the10entrepreneur",
+    "id": "the10%entrepreneur",
     "title": "The 10% Entrepreneur",
     "imgSrc":
         "https://images-na.ssl-images-amazon.com/images/I/41a-GjWo4GL._SX331_BO1,204,203,200_.jpg",
@@ -376,7 +376,7 @@ const List books = [
     "amz": "https://amzn.to/3gfOhur",
   },
   {
-    "id": "askgaryvee",
+    "id": "#askgaryvee",
     "title": "#AskGaryVee",
     "imgSrc": "https://m.media-amazon.com/images/I/61ep+UhtdxL.jpg",
     "author": "Gary Vaynerchuk",
@@ -391,7 +391,7 @@ const List books = [
     "amz": "https://amzn.to/3z4tdQ7",
   },
   {
-    "id": "nowdiscoveryourstrengths",
+    "id": "now,discoveryourstrengths",
     "title": "Now, Discover Your Strengths",
     "imgSrc":
         "https://images-na.ssl-images-amazon.com/images/I/51VpADTeJVL._SX322_BO1,204,203,200_.jpg",
@@ -500,7 +500,7 @@ const List books = [
     "amz": "https://amzn.to/3fTa9wE",
   },
   {
-    "id": "thinkingfastandslow",
+    "id": "thinking,fastandslow",
     "title": "Thinking, Fast and Slow",
     "imgSrc":
         "https://images-na.ssl-images-amazon.com/images/I/41wI53OEpCL._SX332_BO1,204,203,200_.jpg",
@@ -858,17 +858,17 @@ const List books = [
 
 const List youtuber = [
   {
-    "channelName": "Better Ideas",
-    "channelLink": "https://www.youtube.com/channel/UCtUId5WFnN82GdDy7DgaQ7w",
-    "channelImgSrc":
+    "name": "Better Ideas",
+    "url": "https://www.youtube.com/channel/UCtUId5WFnN82GdDy7DgaQ7w",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AAUvwnirbpqnd7FV8ShzIbByyOesFZLgwwIwl8luimDv=s176-c-k-c0x00ffffff-no-rj",
     "books": ["howtowinfriendsandinfluencepeople"],
     "submitted": false,
   },
   {
-    "channelName": "Improvement Pill",
-    "channelLink": "https://www.youtube.com/channel/UCBIt1VN5j37PVM8LLSuTTlw",
-    "channelImgSrc":
+    "name": "Improvement Pill",
+    "url": "https://www.youtube.com/channel/UCBIt1VN5j37PVM8LLSuTTlw",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AAUvwnj48wtToX9ZV95Rpk8srh2Rn7znsivH47S490Ckxw=s176-c-k-c0x00ffffff-no-rj",
     "books": [
       "thepowerofnow",
@@ -878,7 +878,7 @@ const List youtuber = [
       "models",
       "thepowerofhabit",
       "mastery",
-      "the4hourworkweek",
+      "the4-hourworkweek",
       "the7habitsofhighlyeffectivepeople",
       "nomoremrniceguy",
       "toolsoftitans",
@@ -887,9 +887,9 @@ const List youtuber = [
     "submitted": false,
   },
   {
-    "channelName": "Andrew Kirby",
-    "channelLink": "https://www.youtube.com/channel/UC8JNIm02zw8h_3NBrP_zsZA",
-    "channelImgSrc":
+    "name": "Andrew Kirby",
+    "url": "https://www.youtube.com/channel/UC8JNIm02zw8h_3NBrP_zsZA",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AAUvwnjBz2vxOFKEXylFjb1UDEk_OjY6IP59uNBKY3Vk=s176-c-k-c0x00ffffff-no-rj",
     "books": [
       "meditations",
@@ -903,7 +903,7 @@ const List youtuber = [
       "theslightedge",
       "mastery",
       "principles",
-      "manssearchformeaning",
+      "man'ssearchformeaning",
       "mindset",
       "psychocybernetics",
       "deepwork",
@@ -915,13 +915,13 @@ const List youtuber = [
     "submitted": false,
   },
   {
-    "channelName": "Team Fearless",
-    "channelLink": "https://www.youtube.com/channel/UCf9_s9ii6BZ-klpgmtIi3WQ",
-    "channelImgSrc":
+    "name": "Team Fearless",
+    "url": "https://www.youtube.com/channel/UCf9_s9ii6BZ-klpgmtIi3WQ",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AAUvwni_74DrcJm51Zx4x6MDzt1LJh1Nbofq2lGpe4lmAA=s176-c-k-c0x00ffffff-no-rj",
     "books": [
       "thecompoundeffect",
-      "canthurtme",
+      "can'thurtme",
       "maxoutyourlife",
       "outwittingthedevil",
       "limitless",
@@ -929,16 +929,16 @@ const List youtuber = [
     "submitted": false,
   },
   {
-    "channelName": "Be Inspired",
-    "channelLink": "https://www.youtube.com/channel/UCaKZDEMDdQc8t6GzFj1_TDw",
-    "channelImgSrc":
+    "name": "Be Inspired",
+    "url": "https://www.youtube.com/channel/UCaKZDEMDdQc8t6GzFj1_TDw",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AAUvwnipOE3-GFhw8TpiXwk-aQB0Mz8Zpsgq8kC-YjMWzg=s176-c-k-c0x00ffffff-no-rj",
     "books": [
-      "the10entrepreneur",
+      "the10%entrepreneur",
       "alltheleaderyoucanbe",
       "egoistheenemy",
       "abundancenow",
-      "askgaryvee",
+      "#askgaryvee",
       "zerotoone",
       "thefouragreements",
       "nowdiscoveryourstrengths",
@@ -957,7 +957,7 @@ const List youtuber = [
       "thinkandgrowrich",
       "stevejobs",
       "longwalktofreedom",
-      "thinkingfastandslow",
+      "thinking,fastandslow",
       "themagicofthinkingbig",
       "talentisoverrated",
       "spark",
@@ -968,9 +968,9 @@ const List youtuber = [
     "submitted": false,
   },
   {
-    "channelName": "Ali Abdaal",
-    "channelLink": "https://www.youtube.com/channel/UCoOae5nYA7VqaXzerajD0lg",
-    "channelImgSrc":
+    "name": "Ali Abdaal",
+    "url": "https://www.youtube.com/channel/UCoOae5nYA7VqaXzerajD0lg",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AAUvwnjTeFYoj5eDtxHLIiF36qp7yCZTp4q8mxIKLjWx=s176-c-k-c0x00ffffff-no-rj",
     "books": [
       "atomichabits",
@@ -994,28 +994,28 @@ const List youtuber = [
     "submitted": false,
   },
   {
-    "channelName": "Matt D'Avella",
-    "channelLink": "https://www.youtube.com/c/MattDAvella",
-    "channelImgSrc":
+    "name": "Matt D'Avella",
+    "url": "https://www.youtube.com/c/MattDAvella",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AKedOLR84mGLJ4lf9X4Kos3h-IbYoibV_5Tv7nggIBUgm6c=s176-c-k-c0x00ffffff-no-rj",
     "books": [
       "thegame",
       "thedip",
       "theartofpossibility",
-      "the4hourworkweek",
+      "the4-hourworkweek",
       "thetotalmoneymakeover",
       "thewarofart",
     ],
     "submitted": false,
   },
   {
-    "channelName": "Thomas Frank",
-    "channelLink": "https://www.youtube.com/c/Thomasfrank",
-    "channelImgSrc":
+    "name": "Thomas Frank",
+    "url": "https://www.youtube.com/c/Thomasfrank",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AKedOLTGr4Z50rSM01ou6Ek6iCZVuAu_AZOW2v8RJfrMcw=s176-c-k-c0x00ffffff-no-rj",
     "books": [
       "the7habitsofhighlyeffectivepeople",
-      "the4hourworkweek",
+      "the4-hourworkweek",
       "spark",
       "sogoodtheycan'tignoreyou",
       "deepwork",
@@ -1036,16 +1036,16 @@ const List youtuber = [
     "submitted": false,
   },
   {
-    "channelName": "Caspar Baumeister",
-    "channelLink": "https://medium.com/@casparbm",
-    "channelImgSrc": "https://miro.medium.com/fit/c/131/131/0*6YXjWvdbkvbeioYD",
+    "name": "Caspar Baumeister",
+    "url": "https://medium.com/@casparbm",
+    "imgSrc": "https://miro.medium.com/fit/c/131/131/0*6YXjWvdbkvbeioYD",
     "books": ["theconsolationsofphilosophy", "theethicalslut"],
     "submitted": false,
   },
   {
-    "channelName": "Zach Highley",
-    "channelLink": "https://www.youtube.com/c/Zach Highley",
-    "channelImgSrc":
+    "name": "Zach Highley",
+    "url": "https://www.youtube.com/c/Zach Highley",
+    "imgSrc":
         "https://yt3.ggpht.com/ytc/AKedOLTQFUSKv5AUAUfnQeGM2GppscHQxFpzTLebiHVh=s176-c-k-c0x00ffffff-no-rj",
     "books": [
       "whenbreathbecomesair",
@@ -1053,7 +1053,7 @@ const List youtuber = [
       "steallikeanartist",
       "atomichabits",
       "showyourwork",
-      "manssearchformeaning",
+      "man'ssearchformeaning",
       "howtowinfriendsandinfluencepeople",
       "zerotoone",
       "shoedog",

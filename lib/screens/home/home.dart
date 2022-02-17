@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:youbooks_app/screens/home/dev_home.dart';
+import 'package:youbooks_app/screens/home/results/result_wrapper.dart';
 import 'package:youbooks_app/screens/home/search/search.dart';
-import 'package:youbooks_app/screens/home/search_result/search_result.dart';
 
 // Home widget loads all books and youtuber into state
 class Home extends StatelessWidget {
@@ -8,19 +9,25 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      body: HomeBody(),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Column(
+            children: [
+              Container(
+                height: 85,
+                color: Colors.red,
+              ),
+              const Expanded(child: ResultWrapper()),
+            ],
+          ),
+          const Search(),
+          //const DevHome()
+        ],
+      ),
     );
-  }
-}
-
-class HomeBody extends StatelessWidget {
-  const HomeBody({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Search();
   }
 }

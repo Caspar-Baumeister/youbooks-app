@@ -11,17 +11,14 @@ class DataBaseService {
       FirebaseFirestore.instance.collection('youtubers');
 
   // get all books
-  Future<List<Object?>> getAllBook() async {
-    print("inside databse getallbooks");
-
+  Future<List<Map<String, dynamic>>> getAllBook() async {
     // Get docs from collection reference
     QuerySnapshot querySnapshot = await booksCollection.get();
 
     // Get data from docs and convert map to List
-    final List<Object?> allData =
-        querySnapshot.docs.map((doc) => doc.data()).toList();
-    print("inside databse getallbooks");
-    print(allData[0].toString());
+    final List<Map<String, dynamic>> allData = querySnapshot.docs
+        .map((doc) => {"id": doc.id, "data": doc.data()})
+        .toList();
 
     return allData;
   }

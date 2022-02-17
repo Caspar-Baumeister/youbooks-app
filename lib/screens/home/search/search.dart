@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:youbooks_app/model/books.dart';
 import 'package:youbooks_app/provider/books_provider.dart';
 import 'package:youbooks_app/provider/youtuber_provider.dart';
 import 'package:youbooks_app/screens/home/search/floating_search_bar.dart';
-import 'package:youbooks_app/screens/home/search_result/search_result.dart';
 
 // holds the search functionallity and the Searchwidget
 class Search extends StatefulWidget {
@@ -15,24 +13,22 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  String query = "";
-  List<Book> books = [];
   @override
   Widget build(BuildContext context) {
-    BooksProvider booksProvider = Provider.of<BooksProvider>(context);
-    YoutuberProvider youtuberProvider = Provider.of<YoutuberProvider>(context);
-
-    return Stack(
-      fit: StackFit.expand,
-      children: const [
-        SearchResult(),
-        FloatingSearchBarWidget(),
-      ],
-    );
+    return FloatingSearchBarWidget(onChange: (query) => searchOnChange(query));
   }
 
-  void searchForBook(String query, List<Book> allBooks) {
-    final books = allBooks.where((book) {
+  void searchOnChange(String query) {
+    BooksProvider booksProvider =
+        Provider.of<BooksProvider>(context, listen: false);
+    YoutuberProvider youtuberProvider =
+        Provider.of<YoutuberProvider>(context, listen: false);
+    searchForBook(query, booksProvider);
+    searchForYoutuber(query, youtuberProvider);
+  }
+
+  void searchForBook(String query, BooksProvider booksProvider) {
+    final books = booksProvider.books.where((book) {
       final titleLower = book.title.toLowerCase();
       final authorLower = book.author.toLowerCase();
       final searchLower = query.toLowerCase();
@@ -40,9 +36,16 @@ class _SearchState extends State<Search> {
       return titleLower.contains(searchLower) ||
           authorLower.contains(searchLower);
     }).toList();
-    setState(() {
-      this.query = query;
-      this.books = books;
-    });
+    booksProvider.booksInSearch = books;
+  }
+
+  void searchForYoutuber(String query, YoutuberProvider youtuberProvider) {
+    final youtuber = youtuberProvider.youtuber.where((yt) {
+      final nameLower = yt.name.toLowerCase();
+      final searchLower = query.toLowerCase();
+
+      return nameLower.contains(searchLower);
+    }).toList();
+    youtuberProvider.youtuberInSearch = youtuber;
   }
 }

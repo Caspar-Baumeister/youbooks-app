@@ -7,7 +7,7 @@ class BookSimilarityTile extends StatelessWidget {
       : super(key: key);
 
   final Book item;
-  final double similarity;
+  final num similarity;
   @override
   Widget build(BuildContext context) {
     return ListTile(

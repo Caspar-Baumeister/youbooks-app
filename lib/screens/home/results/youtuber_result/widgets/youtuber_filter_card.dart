@@ -25,7 +25,7 @@ class YoutuberFilterCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              constraints: const BoxConstraints(maxWidth: 80),
+              constraints: const BoxConstraints(maxWidth: 120),
               child: Text(
                 youtuber.name,
                 overflow: TextOverflow.ellipsis,

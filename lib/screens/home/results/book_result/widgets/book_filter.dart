@@ -12,28 +12,36 @@ class BookFilter extends StatelessWidget {
     // dont show filter if type is all and no category is selected
     return booksProvider.selectedBookIds.isNotEmpty
         ? Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0),
             alignment: Alignment.centerLeft,
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                const Text("Your books: "),
-                // show type if type is not all
-                ...booksProvider.selectedBookIds.map((bookId) => BookFilterCard(
-                      onDismiss: () =>
-                          booksProvider.removeFromSelection(bookId),
-                      book: booksProvider.getBookByID(bookId),
-                    )),
-                GestureDetector(
-                  onTap: () {
-                    booksProvider.selectedBookIds = [];
-                  },
-                  child: const Text(
-                    "remove all",
-                    //style: TextStyle(color: Colors.red),
+            padding: const EdgeInsets.symmetric(horizontal: 6.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const Text(
+                    "Your books:",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                )
-              ],
+                  const SizedBox(width: 5),
+                  // show type if type is not all
+                  ...booksProvider.selectedBookIds
+                      .map((bookId) => BookFilterCard(
+                            onDismiss: () =>
+                                booksProvider.removeFromSelection(bookId),
+                            book: booksProvider.getBookByID(bookId),
+                          )),
+                  const SizedBox(width: 5),
+                  GestureDetector(
+                    onTap: () {
+                      booksProvider.selectedBookIds = [];
+                    },
+                    child: const Text(
+                      "remove all",
+                      //style: TextStyle(color: Colors.red),
+                    ),
+                  )
+                ],
+              ),
             ),
           )
         : const SizedBox(height: 0, width: 0);

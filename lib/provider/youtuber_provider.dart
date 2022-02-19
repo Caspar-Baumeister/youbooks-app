@@ -43,7 +43,7 @@ class YoutuberProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void addYoutuber(Youtuber youtuber) {
+  void addYoutuberToSelection(Youtuber youtuber) {
     if (_selectedYoutuber.contains(youtuber)) return;
     _selectedYoutuber.add(youtuber);
     notifyListeners();
@@ -52,6 +52,18 @@ class YoutuberProvider extends ChangeNotifier {
   void removeFromSelection(Youtuber youtuber) {
     if (!_selectedYoutuber.contains(youtuber)) return;
     _selectedYoutuber.remove(youtuber);
+    notifyListeners();
+  }
+
+  void removeFromSearch(Youtuber youtuber) {
+    if (!_youtuberInSearch.contains(youtuber)) return;
+    _youtuberInSearch.remove(youtuber);
+    notifyListeners();
+  }
+
+  void addYoutuberToSearch(Youtuber youtuber) {
+    if (_youtuberInSearch.contains(youtuber)) return;
+    _youtuberInSearch.add(youtuber);
     notifyListeners();
   }
 }

@@ -7,7 +7,7 @@ class YoutuberTile extends StatelessWidget {
       : super(key: key);
 
   final Youtuber item;
-  final int amountSharedBooks;
+  final num amountSharedBooks;
   @override
   Widget build(BuildContext context) {
     return ListTile(

@@ -3,9 +3,9 @@ import 'package:youbooks_app/shared/helper/helper_models.dart';
 double calculateScore(
     // score is the percentage of shared books of searched books from youtuber books.
     // with a smnall penelty of the amount of books a youtuber named
-    int amountSearch,
-    int amountYoutuber,
-    int amountShared) {
+    num amountSearch,
+    num amountYoutuber,
+    num amountShared) {
   return (amountSearch / amountShared) - (amountYoutuber / 10000);
 }
 

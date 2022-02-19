@@ -25,7 +25,7 @@ class BookFilterCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              constraints: const BoxConstraints(maxWidth: 80),
+              constraints: const BoxConstraints(maxWidth: 120),
               child: Text(
                 book.title,
                 overflow: TextOverflow.ellipsis,

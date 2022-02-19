@@ -101,6 +101,31 @@ class DropDownSearch extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                ...booksProvider.selectedBookIds.isEmpty
+                    ? youtuberProvider.youtuberInSearch
+                        .map((e) => YoutuberSearchTile(
+                              item: e,
+                              controller: _floatingSearchBarController,
+                            ))
+                    : [],
+                if (booksProvider.selectedBookIds.isEmpty)
+                  GestureDetector(
+                      onTap: () {
+                        youtuberProvider.selectedYoutuber =
+                            youtuberProvider.youtuber;
+                        youtuberProvider.youtuberInSearch = [];
+                      },
+                      child: ListTile(
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(30.0),
+                          child: Image.asset(
+                            "assets/add-all.png",
+                            height: 50.0,
+                            width: 50.0,
+                          ),
+                        ),
+                        title: const Text("Add all Youtuber"),
+                      )),
                 ...youtuberProvider.selectedYoutuber.isEmpty
                     ? booksProvider.booksInSearch.map((e) => BookSearchTile(
                           item: e,
@@ -108,14 +133,13 @@ class DropDownSearch extends StatelessWidget {
                           controller: _floatingSearchBarController,
                         ))
                     : [],
-                ...booksProvider.selectedBookIds.isEmpty
-                    ? youtuberProvider.youtuberInSearch
-                        .map((e) => YoutuberSearchTile(
-                              item: e,
-                              addItem: youtuberProvider.addYoutuber,
-                              controller: _floatingSearchBarController,
-                            ))
-                    : [],
+                // if (youtuberProvider.selectedYoutuber.isEmpty)
+                //   GestureDetector(
+                //       onTap: () => booksProvider.selectedBookIds =
+                //           List,
+                //       child: const ListTile(
+                //         title: Text("Add all"),
+                //       )),
               ],
             ),
           ),

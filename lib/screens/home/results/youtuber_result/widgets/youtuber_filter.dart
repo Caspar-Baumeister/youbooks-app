@@ -12,29 +12,40 @@ class YoutuberFilter extends StatelessWidget {
     // dont show filter if type is all and no category is selected
     return youtuberProvider.selectedYoutuber.isNotEmpty
         ? Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0),
             alignment: Alignment.centerLeft,
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                const Text("Your Youtubers: "),
-                // show type if type is not all
-                ...youtuberProvider.selectedYoutuber
-                    .map((youtuber) => YoutuberFilterCard(
-                          onDismiss: () =>
-                              youtuberProvider.removeFromSelection(youtuber),
-                          youtuber: youtuber,
-                        )),
-                GestureDetector(
-                  onTap: () {
-                    youtuberProvider.selectedYoutuber = [];
-                  },
-                  child: const Text(
-                    "remove all",
-                    //style: TextStyle(color: Colors.red),
+            padding: const EdgeInsets.symmetric(horizontal: 6.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const Text(
+                    "Your Youtubers: ",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                )
-              ],
+                  const SizedBox(width: 5),
+                  // show type if type is not all
+                  ...youtuberProvider.selectedYoutuber
+                      .map((youtuber) => YoutuberFilterCard(
+                            onDismiss: () {
+                              youtuberProvider.removeFromSelection(youtuber);
+                              youtuberProvider.addYoutuberToSearch(youtuber);
+                            },
+                            youtuber: youtuber,
+                          )),
+                  const SizedBox(width: 5),
+                  GestureDetector(
+                    onTap: () {
+                      youtuberProvider.selectedYoutuber = [];
+                      youtuberProvider.youtuberInSearch =
+                          youtuberProvider.youtuber;
+                    },
+                    child: const Text(
+                      "remove all",
+                      //style: TextStyle(color: Colors.red),
+                    ),
+                  )
+                ],
+              ),
             ),
           )
         : const SizedBox(height: 0, width: 0);

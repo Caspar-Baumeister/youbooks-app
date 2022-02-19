@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:youbooks_app/model/youtuber.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
+import 'package:youbooks_app/provider/youtuber_provider.dart';
 
 class YoutuberSearchTile extends StatelessWidget {
   const YoutuberSearchTile(
-      {Key? key,
-      required this.item,
-      required this.addItem,
-      required this.controller})
+      {Key? key, required this.item, required this.controller})
       : super(key: key);
 
   final Youtuber item;
-  final Function addItem;
   final FloatingSearchBarController controller;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          addItem(item);
+          Provider.of<YoutuberProvider>(context, listen: false)
+              .addYoutuberToSelection(item);
+          Provider.of<YoutuberProvider>(context, listen: false)
+              .removeFromSearch(item);
           controller.close();
         },
         child: ListTile(

@@ -2,13 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-import 'package:youbooks_app/model/books.dart';
 import 'package:youbooks_app/model/youtuber.dart';
-import 'package:youbooks_app/provider/books_provider.dart';
 import 'package:youbooks_app/provider/youtuber_provider.dart';
-import 'package:youbooks_app/screens/home/results/book_result/widgets/book_similarity_tile.dart';
 import 'package:youbooks_app/screens/home/results/youtuber_result/widgets/youtuber_similarity_tile.dart';
-import 'package:youbooks_app/shared/helper/helper_functions.dart';
 import 'package:youbooks_app/shared/helper/helper_models.dart';
 
 // takes the youtuber that are selected

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:youbooks_app/model/books.dart';
+import 'package:youbooks_app/provider/books_provider.dart';
 
 class BookFilterCard extends StatelessWidget {
   const BookFilterCard({
     required this.book,
-    required this.onDismiss,
     Key? key,
   }) : super(key: key);
   final Book book;
-  final Function onDismiss;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,9 @@ class BookFilterCard extends StatelessWidget {
               constraints: const BoxConstraints(maxHeight: 12),
               padding: const EdgeInsets.all(0.0),
               iconSize: 12.0,
-              onPressed: () => onDismiss(),
+              onPressed: () =>
+                  Provider.of<BooksProvider>(context, listen: false)
+                      .removeFromSelection(book),
               icon: const Icon(
                 Icons.close_rounded,
                 size: 12.0,

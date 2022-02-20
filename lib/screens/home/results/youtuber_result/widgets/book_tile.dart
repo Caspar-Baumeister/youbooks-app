@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:youbooks_app/model/books.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:youbooks_app/model/youtuber.dart';
 import 'package:youbooks_app/provider/books_provider.dart';
 import 'package:youbooks_app/provider/youtuber_provider.dart';
+import 'package:youbooks_app/shared/helper/helper_functions.dart';
 
 class BookTile extends StatelessWidget {
   const BookTile({Key? key, required this.item, required this.count})
@@ -15,7 +14,7 @@ class BookTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _launchURL(),
+      onTap: () => launchURL(item.amzLink),
       child: ListTile(
         leading: ClipRRect(
           child: Image.network(
@@ -35,7 +34,7 @@ class BookTile extends StatelessWidget {
                   youtuberProvider.selectedYoutuber = [];
                   youtuberProvider.youtuberInSearch = [];
                   Provider.of<BooksProvider>(context, listen: false)
-                      .addBook(item.id);
+                      .addBook(item);
                 },
                 child: Text(
                   "by ${count.toStringAsFixed(0)}\nYoutuber's",
@@ -46,9 +45,5 @@ class BookTile extends StatelessWidget {
             : null,
       ),
     );
-  }
-
-  void _launchURL() async {
-    if (!await launch(item.amzLink)) throw 'Could not launch ${item.amzLink}';
   }
 }

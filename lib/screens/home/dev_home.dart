@@ -23,7 +23,6 @@ class DevHome extends StatelessWidget {
         amzLink: book["amz"],
         imgSrc: book["imgSrc"],
       );
-      print("added ${book["title"]}");
     }
     for (Map<String, dynamic> yt in youtuber) {
       DataBaseService().addYoutuber(
@@ -32,7 +31,6 @@ class DevHome extends StatelessWidget {
         url: yt["url"],
         imgSrc: yt["imgSrc"],
       );
-      print("added ${yt["name"]}");
     }
   }
 }

@@ -17,8 +17,13 @@ class BooksProvider extends ChangeNotifier {
   List<Book> get booksInSearch => _booksInSearch;
   List<String> get selectedBookIds => _selectedBookIds;
 
-  Book getBookByID(bookId) {
-    return _books.firstWhere((element) => element.id == bookId);
+  Book? getBookByID(String bookId) {
+    for (Book book in _books) {
+      if (book.id == bookId) {
+        return book;
+      }
+    }
+    return null;
   }
 
   BooksProvider() {
@@ -46,20 +51,22 @@ class BooksProvider extends ChangeNotifier {
 
     _books =
         List<Book>.from(rawBooks.map((e) => Book.fromJson(e["id"], e["data"])));
-    _booksInSearch = _books;
+    _booksInSearch = List<Book>.from(_books);
     initialized = true;
     notifyListeners();
   }
 
-  void addBook(String bookId) {
-    if (_selectedBookIds.contains(bookId)) return;
-    _selectedBookIds.add(bookId);
+  void addBook(Book book) {
+    if (_selectedBookIds.contains(book.id)) return;
+    _selectedBookIds.add(book.id);
+    _booksInSearch.remove(book);
     notifyListeners();
   }
 
-  void removeFromSelection(String bookId) {
-    if (!_selectedBookIds.contains(bookId)) return;
-    _selectedBookIds.remove(bookId);
+  void removeFromSelection(Book book) {
+    if (!_selectedBookIds.contains(book.id)) return;
+    _selectedBookIds.remove(book.id);
+    _booksInSearch.add(book);
     notifyListeners();
   }
 }

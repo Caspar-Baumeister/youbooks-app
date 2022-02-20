@@ -33,12 +33,11 @@ class YoutuberProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // TODO so wie bei books id laden
   Future<void> loadData() async {
     final List<Object?> rawYoutuber = await DataBaseService().getAllYoutuber();
     _youtuber =
         List<Youtuber>.from(rawYoutuber.map((e) => Youtuber.fromJson(e)));
-    _youtuberInSearch = _youtuber;
+    _youtuberInSearch = List<Youtuber>.from(_youtuber);
     initialized = true;
     notifyListeners();
   }
@@ -65,5 +64,13 @@ class YoutuberProvider extends ChangeNotifier {
     if (_youtuberInSearch.contains(youtuber)) return;
     _youtuberInSearch.add(youtuber);
     notifyListeners();
+  }
+
+  void resetSearch() {
+    _youtuberInSearch = [];
+    for (Youtuber yt in _youtuber) {
+      _youtuberInSearch.add(yt);
+      notifyListeners();
+    }
   }
 }

@@ -10,7 +10,7 @@ class FloatingSearchBarWidget extends StatefulWidget {
   const FloatingSearchBarWidget({Key? key, required this.onChange})
       : super(key: key);
 
-  final onChange;
+  final void Function(String)? onChange;
 
   @override
   State<FloatingSearchBarWidget> createState() =>
@@ -18,7 +18,7 @@ class FloatingSearchBarWidget extends StatefulWidget {
 }
 
 class _FloatingSearchBarWidgetState extends State<FloatingSearchBarWidget> {
-  FloatingSearchBarController _floatingSearchBarController =
+  final FloatingSearchBarController _floatingSearchBarController =
       FloatingSearchBarController();
   @override
   Widget build(BuildContext context) {
@@ -39,33 +39,6 @@ class _FloatingSearchBarWidgetState extends State<FloatingSearchBarWidget> {
       transitionDuration: const Duration(milliseconds: 500),
       transition: CircularFloatingSearchBarTransition(),
       debounceDelay: const Duration(milliseconds: 500),
-      // actions: [
-      //   FloatingSearchBarAction(
-      //     showIfOpened: false,
-      //     child: CircularButton(
-      //       icon: const ImageIcon(AssetImage("assets/cover.png")),
-      //       onPressed: () {
-      //         print('Places Pressed');
-      //       },
-      //     ),
-      //   ),
-      //   FloatingSearchBarAction.searchToClear(
-      //     showIfClosed: false,
-      //   ),
-      //   FloatingSearchBarAction.icon(
-      //       showIfClosed: false,
-      //       showIfOpened: true,
-      //       icon: const Icon(Icons.clear),
-      //       onTap: () {
-      //         // FloatingSearchBar.of(context)
-      //         _floatingSearchBarController.clear();
-      //         _floatingSearchBarController.close();
-      //         // FloatingSearchBar.of(context).close();
-      //         // final bar = FloatingSearchAppBar.of(context);
-      //         // bar.clear();
-      //         // print(bar);
-      //       }),
-      // ],
       builder: (context, transition) {
         return DropDownSearch(
             booksProvider: booksProvider,
@@ -126,10 +99,14 @@ class DropDownSearch extends StatelessWidget {
                         ),
                         title: const Text("Add all Youtuber"),
                       )),
+                const Divider(
+                  color: Colors.red,
+                  endIndent: 8.0,
+                  indent: 8.0,
+                ),
                 ...youtuberProvider.selectedYoutuber.isEmpty
                     ? booksProvider.booksInSearch.map((e) => BookSearchTile(
                           item: e,
-                          addItem: booksProvider.addBook,
                           controller: _floatingSearchBarController,
                         ))
                     : [],

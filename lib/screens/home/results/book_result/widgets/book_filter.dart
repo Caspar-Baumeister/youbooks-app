@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:youbooks_app/model/books.dart';
 import 'package:youbooks_app/provider/books_provider.dart';
 import 'package:youbooks_app/screens/home/results/book_result/widgets/book_filter_card.dart';
 
@@ -24,12 +25,18 @@ class BookFilter extends StatelessWidget {
                   ),
                   const SizedBox(width: 5),
                   // show type if type is not all
-                  ...booksProvider.selectedBookIds
-                      .map((bookId) => BookFilterCard(
-                            onDismiss: () =>
-                                booksProvider.removeFromSelection(bookId),
-                            book: booksProvider.getBookByID(bookId),
-                          )),
+                  ...booksProvider.selectedBookIds.map((bookId) {
+                    Book? matchedBook = booksProvider.getBookByID(bookId);
+                    if (matchedBook != null) {
+                      return BookFilterCard(
+                        book: matchedBook,
+                      );
+                    } else {
+                      return Container(
+                        width: 0,
+                      );
+                    }
+                  }),
                   const SizedBox(width: 5),
                   GestureDetector(
                     onTap: () {
@@ -37,7 +44,6 @@ class BookFilter extends StatelessWidget {
                     },
                     child: const Text(
                       "remove all",
-                      //style: TextStyle(color: Colors.red),
                     ),
                   )
                 ],

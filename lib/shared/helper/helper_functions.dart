@@ -1,4 +1,5 @@
 import 'package:youbooks_app/shared/helper/helper_models.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 double calculateScore(
     // score is the percentage of shared books of searched books from youtuber books.
@@ -36,4 +37,8 @@ int calculateSharedBooksAmount(
 
   // procentage of searched books that the youtuber read
   return sharedBooks;
+}
+
+void launchURL(url) async {
+  if (!await launch(url)) throw 'Could not launch $url';
 }

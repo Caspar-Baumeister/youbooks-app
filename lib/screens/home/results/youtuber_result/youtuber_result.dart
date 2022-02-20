@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:youbooks_app/model/books.dart';
 import 'package:youbooks_app/model/youtuber.dart';
 import 'package:youbooks_app/provider/books_provider.dart';
 import 'package:youbooks_app/provider/youtuber_provider.dart';
-import 'package:youbooks_app/screens/home/results/book_result/widgets/book_similarity_list.dart';
 import 'package:youbooks_app/screens/home/results/youtuber_result/widgets/book_list.dart';
 import 'package:youbooks_app/screens/home/results/youtuber_result/widgets/youtuber_filter.dart';
 import 'package:youbooks_app/screens/home/results/youtuber_result/widgets/youtuber_similarity_list.dart';
@@ -31,8 +31,10 @@ class YoutuberResult extends StatelessWidget {
             : booksWithCount.firstWhereOrNull((o) => o.book.id == bookId);
         // if the bookId does not exist in the bookWithCount list, add it
         if (foundFit == null) {
-          booksWithCount.add(
-              BookWithCount(book: booksProvider.getBookByID(bookId), count: 1));
+          Book? matchedBook = booksProvider.getBookByID(bookId);
+          if (matchedBook != null) {
+            booksWithCount.add(BookWithCount(book: matchedBook, count: 1));
+          }
         }
         // if it exist, increase the count by one
         else {

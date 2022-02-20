@@ -36,8 +36,7 @@ class YoutuberFilter extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       youtuberProvider.selectedYoutuber = [];
-                      youtuberProvider.youtuberInSearch =
-                          youtuberProvider.youtuber;
+                      youtuberProvider.resetSearch();
                     },
                     child: const Text(
                       "remove all",

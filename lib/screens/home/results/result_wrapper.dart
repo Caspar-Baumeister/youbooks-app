@@ -4,7 +4,7 @@ import 'package:youbooks_app/provider/books_provider.dart';
 import 'package:youbooks_app/provider/youtuber_provider.dart';
 import 'package:youbooks_app/screens/home/results/book_result/book_result.dart';
 import 'package:youbooks_app/screens/home/results/youtuber_result/youtuber_result.dart';
-import 'package:youbooks_app/shared/loading.dart';
+import 'package:youbooks_app/shared/info_home.dart';
 
 // returns either the book result if a book was selected
 // or a youtuber result if an youtuber was collected
@@ -20,6 +20,6 @@ class ResultWrapper extends StatelessWidget {
         ? const BookResult()
         : youtuberProvider.selectedYoutuber.isNotEmpty
             ? const YoutuberResult()
-            : const Loading();
+            : const InfoHome();
   }
 }

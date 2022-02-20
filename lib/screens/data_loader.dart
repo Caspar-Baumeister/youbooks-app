@@ -8,6 +8,7 @@ import 'package:youbooks_app/shared/loading.dart';
 class DataLoader extends StatelessWidget {
   const DataLoader({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     BooksProvider booksProvider = Provider.of<BooksProvider>(context);
     YoutuberProvider youtuberProvider = Provider.of<YoutuberProvider>(context);

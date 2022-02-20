@@ -21,9 +21,19 @@ class BookResult extends StatelessWidget {
             children: [
               YoutuberList(bookIds: booksProvider.selectedBookIds),
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(4.0),
                 child: Divider(
                   color: Colors.red,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text("Book recommendations"),
+                    Text("Similarity points")
+                  ],
                 ),
               ),
               BookSimilarityList(bookIds: booksProvider.selectedBookIds)

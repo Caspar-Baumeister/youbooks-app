@@ -854,6 +854,37 @@ const List books = [
     "author": "Janet W. Hardy, Dossie Easton",
     "amz": "https://amzn.to/3hvZJmT",
   },
+  {
+    "id": "thego-giver",
+    "title": "The Go-Giver",
+    "imgSrc": "https://m.media-amazon.com/images/I/51sLS7otdkL.jpg",
+    "author": "Bob Burg, John David Mann",
+    "amz": "https://www.amazon.com/gp/product/B00YBBKLKS/?tag=allencheng-20",
+  },
+  {
+    "id": "thefredfactor",
+    "title": "The Fred Factor",
+    "imgSrc": "https://m.media-amazon.com/images/I/41+++gZKADL.jpg",
+    "author": "Mark Sanborn, John C. Maxwell",
+    "amz": "https://www.amazon.com/gp/product/B000FC1LH4/?tag=allencheng-20",
+  },
+  {
+    "id": "keepanypromise",
+    "title": "Keep Any Promise",
+    "imgSrc": "https://m.media-amazon.com/images/I/41wZIrE9vtL.jpg",
+    "author": "Karim H. Ismail",
+    "amz":
+        "https://www.amazon.com/Keep-Any-Promise-Blueprint-Designing-ebook/dp/B07YDCVD4N/ref=sr_1_1?crid=5VN2AGDL991B&keywords=keep+any+promise&qid=1645668534&s=digital-text&sprefix=keep+any+promis%2Cdigital-text%2C74&sr=1-1",
+  },
+  {
+    "id": "radicals&visionaries",
+    "title": "Radicals & Visionaries",
+    "imgSrc":
+        "https://images-na.ssl-images-amazon.com/images/I/51CS17F800L._SX317_BO1,204,203,200_.jpg",
+    "author": "Thaddeus Wawro",
+    "amz":
+        "https://www.amazon.com/Radicals-Visionaries-Entrepreneurs-Revolutionized-Century/dp/1891984136/ref=sr_1_1?crid=1ZLG6BV59SLQK&keywords=radical+%26+visionaries&qid=1645668798&sprefix=radicals+%26+visionaries%2Caps%2C65&sr=8-1"
+  },
 ];
 
 const List youtuber = [
@@ -1039,7 +1070,18 @@ const List youtuber = [
     "name": "Caspar Baumeister",
     "url": "https://medium.com/@casparbm",
     "imgSrc": "https://miro.medium.com/fit/c/131/131/0*6YXjWvdbkvbeioYD",
-    "books": ["theconsolationsofphilosophy", "theethicalslut"],
+    "books": [
+      "the48lawsofpower",
+      "meditations",
+      "richdadpoordad",
+      "mastery",
+      "principles",
+      "theethicalslut",
+      "the7habitsofhighlyeffectivepeople",
+      "man'ssearchformeaning",
+      "howtowinfriendsandinfluencepeople",
+      "atomichabits"
+    ],
     "submitted": false,
   },
   {
@@ -1061,4 +1103,23 @@ const List youtuber = [
     ],
     "submitted": false,
   },
+  {
+    "name": "Evan Carmichael",
+    "url": "https://www.youtube.com/c/Evancarmichael",
+    "imgSrc":
+        "https://yt3.ggpht.com/ytc/AKedOLQsQBOEYJH18b9JCwChN4KfOcQLPxitNatuPAlhGw=s176-c-k-c0x00ffffff-no-rj",
+    "books": [
+      "radicals&visionaries",
+      "keepanypromise",
+      "thego-giver",
+      "thefredfactor",
+      "thinkandgrowrich",
+      "the4-hourworkweek",
+    ],
+    "submitted": false,
+  },
 ];
+
+
+// maybe add:
+// jorden peterson

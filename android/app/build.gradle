@@ -57,8 +57,8 @@ android {
         applicationId "com.youbooks"
         minSdkVersion 20
         targetSdkVersion 30
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionCode 2//flutterVersionCode.toInteger()
+        versionName "1.1"//flutterVersionName
         multiDexEnabled true
 
     }

@@ -885,6 +885,42 @@ const List books = [
     "amz":
         "https://www.amazon.com/Radicals-Visionaries-Entrepreneurs-Revolutionized-Century/dp/1891984136/ref=sr_1_1?crid=1ZLG6BV59SLQK&keywords=radical+%26+visionaries&qid=1645668798&sprefix=radicals+%26+visionaries%2Caps%2C65&sr=8-1"
   },
+  // {
+  //   "id": "",
+  //   "title": "",
+  //   "imgSrc":
+  //       "",
+  //   "author": "",
+  //   "amz":
+  //       ""
+  // },
+  // {
+  //   "id": "",
+  //   "title": "",
+  //   "imgSrc":
+  //       "",
+  //   "author": "",
+  //   "amz":
+  //       ""
+  // },
+  // {
+  //   "id": "",
+  //   "title": "",
+  //   "imgSrc":
+  //       "",
+  //   "author": "",
+  //   "amz":
+  //       ""
+  // },
+  // {
+  //   "id": "",
+  //   "title": "",
+  //   "imgSrc":
+  //       "",
+  //   "author": "",
+  //   "amz":
+  //       ""
+  // },
 ];
 
 const List youtuber = [

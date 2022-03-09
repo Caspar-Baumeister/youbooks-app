@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
           // To reset the database, delete everything in firebase and
           // make sure you have all the data in the file data here
           // then uncommend the following line and run the app. Press the button once and done!
-          // const DevHome()
+          const DevHome()
         ],
       ),
     );

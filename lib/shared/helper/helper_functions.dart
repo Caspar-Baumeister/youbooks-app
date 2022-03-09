@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:youbooks_app/shared/helper/helper_models.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -41,4 +42,19 @@ int calculateSharedBooksAmount(
 
 void launchURL(url) async {
   if (!await launch(url)) throw 'Could not launch $url';
+}
+
+InputDecoration buildInputDecoration(String hintText) {
+  return InputDecoration(
+    suffixIconConstraints: const BoxConstraints(minWidth: 0, minHeight: 0),
+    alignLabelWithHint: true,
+    floatingLabelBehavior: FloatingLabelBehavior.never,
+    border: OutlineInputBorder(
+      borderSide: const BorderSide(width: 1.0),
+      borderRadius: BorderRadius.circular(28.0),
+    ),
+    hintText: hintText,
+    hintStyle: const TextStyle(fontSize: 18),
+    contentPadding: const EdgeInsets.fromLTRB(12.0, 2.0, 0.0, 10.0),
+  );
 }
